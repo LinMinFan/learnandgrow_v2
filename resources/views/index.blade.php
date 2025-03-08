@@ -1,12 +1,20 @@
-@if (Route::has('login'))
-    <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-        @auth
-            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-        @else
-            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">{{ __('admin.login') }}</a>
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">{{ __('admin.register') }}</a>
-            @endif
-        @endauth
+@extends('core.layouts.master')
+
+@push('css')
+
+@endpush
+
+@section('content')
+    @include('site.partials.notification')
+
+    <!-- 主頁面內容 -->
+    <div class="container mt-5">
+        <h1>歡迎來到首頁！</h1>
+        <p>這是一個簡單的網站，擁有固定在頁面頂部的導航列。</p>
     </div>
-@endif
+    
+@endsection
+
+@push('js')
+    
+@endpush

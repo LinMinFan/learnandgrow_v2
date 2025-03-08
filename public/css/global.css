@@ -1,0 +1,68 @@
+/* 固定在頁面最頂端 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* 確保導航列在最上層 */
+    background-color: #0abab5; /* Tiffany 藍色背景 */
+}
+
+/* 防止內容被遮住 */
+body {
+    padding-top: 60px; /* 根據 navbar 的高度調整 */
+}
+
+/* 使用更具選擇性的選擇器來設定 Font Awesome 圖示的顏色 */
+.navbar-brand {
+    color: white !important; /* 強制顯示白色 */
+    transition: color 0.5s ease; /* 添加過渡效果 */
+}
+
+/* 滑鼠懸停時，改為深藍色 */
+.navbar-brand:hover {
+    color: #003366 !important; /* 強制顯示深藍色 */
+}
+
+/* 讓 nav bar 字體顏色為白色 */
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-right: auto; /* 讓首頁選項靠左 */
+}
+
+/* 確保 footer 背景色與 navbar 相同 (Tiffany 藍色) */
+.footer-area {
+    background-color: #0abab5; /* Tiffany 藍 */
+    color: white; /* 文字顏色 */
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 超連結顏色與樣式 */
+.footer-area a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* 滑鼠懸停時的效果 */
+.footer-area a:hover {
+    color: #003366; /* 深藍色 */
+}
+
+/* 心形圖示的顏色 */
+.footer-area i {
+    color: red;
+    margin: 0 5px;
+}
