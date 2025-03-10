@@ -14,15 +14,10 @@
                                 {{ __('admin.home') }}
                             </a>
                         </li>
-                        <li class="drop-down">
-                            <a href="">
+                        <li class="portfolio">
+                            <a href="{{ route('portfolio.index') }}">
                                 {{ __('admin.portfolio') }}
                             </a>
-                            <ul>
-                                <a href="{{ route('get.api') }}">
-                                    Api
-                                </a>
-                            </ul>
                         </li>
                         <li class="contact">
                             <a href="{{ route('contact') }}">

@@ -7,8 +7,8 @@ use Illuminate\View\View;
 
 class PortfolioController extends Controller
 {
-    public function getApi(Request $request): View
+    public function index(Request $request): View
     {
-        return view('portfolio.api');
+        return view('portfolio.index');
     }
 }

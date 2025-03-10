@@ -25,7 +25,7 @@ Route::get('/contact', [ContactController::class, 'getContact'] )->name('contact
 
 /* 作品集 */
 Route::prefix('portfolio')->group(function () {
-    Route::get('/api', [PortfolioController::class, 'getApi'] )->name('get.api');
+    Route::get('/index', [PortfolioController::class, 'index'] )->name('portfolio.index');
 });
 
 
