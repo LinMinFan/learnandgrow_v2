@@ -28,16 +28,22 @@
     @endif
     
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('favicon.ico') }}">
     <link rel="icon" href="{{ asset($site->firstWhere('key', 'favicon')->value) ?? config('admin_site.favicon') }}">
 
     <!-- bootstrap -->
     <link href="{{ asset('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- font-awesome -->
+    <!-- font-awesome 使用 js 版本 -->
     {{-- <link href="{{ asset('css/all.min.css') }}" rel="stylesheet"> --}}
 
-    <!-- global -->
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/venobox/venobox.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
     <link href="{{ asset('css/global.css') }}" rel="stylesheet">
 
     @stack('css')
@@ -67,7 +73,16 @@
     <!-- font-awesome -->
     <script defer src="{{ asset('js/all.min.js') }}"></script>
 
-    <!-- global -->
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('vendor/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('vendor/venobox/venobox.min.js') }}"></script>
+    <script src="{{ asset('vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  
+    <!-- Template Main JS File -->
     <script defer src="{{ asset('js/global.js') }}"></script>
 
     @stack('js')

@@ -1,36 +1,67 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto"> <!-- 使用 mr-auto 將左側選項對齊到左邊 -->
-                <a class="navbar-brand" href="{{ route('index') }}">
-                    <i class="fas fa-home"></i>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top ">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 d-flex align-items-center justify-content-between">
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a href="{{ route('index') }}" class="logo">
+                    <i class="fa-solid fa-house"></i>
                 </a>
-            </ul>
-            <ul class="navbar-nav ml-auto"> <!-- 右側選項對齊右邊 -->
-                @if (Route::has('login'))
-                    @auth
-                        <li class="nav-item">
-                            <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
-                        </li>
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">聯繫我</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="memberDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                會員中心
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li class="home_index active">
+                            <a href="{{ route('index') }}">
+                                {{ __('admin.home') }}
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="memberDropdown">
-                                <a class="dropdown-item" href="{{ route('login') }}">{{ __('admin.login') }}</a>
-                                @if (Route::has('register'))
-                                    <a class="dropdown-item" href="{{ route('register') }}">{{ __('admin.register') }}</a>
-                                @endif
-                            </div>
                         </li>
-                    @endauth
-                @endif
-            </ul>
+                        <li>
+                            <a href="#about">
+                                {{ __('admin.about') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills">
+                                {{ __('admin.skills') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#experience">
+                                {{ __('admin.experience') }}
+                            </a>
+                        </li>
+                        <li class="contact">
+                            <a href="{{ route('contact') }}">
+                                {{ __('admin.contact') }}
+                            </a>
+                        </li>
+                        @if (Route::has('login'))
+                            @auth
+                                <li class="nav-item">
+                                    <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
+                                </li>
+                            @else
+                                <li class="drop-down">
+                                    <a href="">
+                                        {{ __('admin.member_center') }}
+                                    </a>
+                                    <ul>
+                                        <a href="{{ route('login') }}">
+                                            {{ __('admin.login') }}
+                                        </a>
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}">
+                                                {{ __('admin.register') }}
+                                            </a>
+                                        @endif
+                                    </ul>
+                                </li>
+                            @endauth
+                        @endif
+                    </ul>
+                </nav>
+                <!-- .nav-menu -->
+            </div>
         </div>
     </div>
-</nav>
+</header>
+<!-- End Header -->
