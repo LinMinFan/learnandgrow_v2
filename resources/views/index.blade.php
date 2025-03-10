@@ -85,7 +85,7 @@
                             <h4>
                                 <a href="">程式語言</a>
                             </h4>
-                            <p>Html Css JavaScript jQuery Php Ajax Sql C C++ </p>
+                            <p>Html Css JavaScript jQuery Php Ajax Sql C/C++ </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
@@ -96,7 +96,7 @@
                             <h4>
                                 <a href="">資料庫</a>
                             </h4>
-                            <p>MySQL MariaDB RDBMS 資料庫軟體應用 資料備份與復原</p>
+                            <p>MySQL MariaDB RDBMS 資料庫正規化 資料庫軟體應用 資料備份與復原</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
