@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,7 +20,14 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+/* 聯絡我 */
 Route::get('/contact', [ContactController::class, 'getContact'] )->name('contact');
+
+/* 作品集 */
+Route::prefix('portfolio')->group(function () {
+    Route::get('/api', [PortfolioController::class, 'getApi'] )->name('get.api');
+});
+
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

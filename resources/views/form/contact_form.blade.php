@@ -1,4 +1,4 @@
-@extends('core.layouts.master')
+@extends('core.layouts.contact')
 
 @push('css')
 

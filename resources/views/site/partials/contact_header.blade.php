@@ -14,21 +14,6 @@
                                 {{ __('admin.home') }}
                             </a>
                         </li>
-                        <li>
-                            <a href="#about">
-                                {{ __('admin.about') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#skills">
-                                {{ __('admin.skills') }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#experience">
-                                {{ __('admin.experience') }}
-                            </a>
-                        </li>
                         <li class="drop-down">
                             <a href="">
                                 {{ __('admin.portfolio') }}

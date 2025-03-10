@@ -97,6 +97,10 @@
         return;
       }
 
+      if (window.location.pathname.includes('portfolio')) {
+        return;
+      }
+
       var cur_pos = $(this).scrollTop() + 200;
   
       nav_sections.each(function() {
