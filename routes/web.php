@@ -21,11 +21,15 @@ Route::get('/', function () {
 })->name('index');
 
 /* 聯絡我 */
-Route::get('/contact', [ContactController::class, 'getContact'] )->name('contact');
+Route::prefix('contact')->group(function () {
+    Route::get('/', [ContactController::class, 'getContact'] )->name('contact');
+    Route::post('/temporary', [ContactController::class, 'temporary'] )->name('temporary');
+    Route::post('/save', [ContactController::class, 'save'] )->name('contact.save');
+});
 
 /* 作品集 */
 Route::prefix('portfolio')->group(function () {
-    Route::get('/index', [PortfolioController::class, 'index'] )->name('portfolio.index');
+    Route::get('/', [PortfolioController::class, 'index'] )->name('portfolio.index');
 });
 
 
