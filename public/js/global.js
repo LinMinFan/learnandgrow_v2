@@ -101,6 +101,18 @@
         return;
       }
 
+      if (window.location.pathname.includes('login')) {
+        return;
+      }
+
+      if (window.location.pathname.includes('register')) {
+        return;
+      }
+
+      if (window.location.pathname.includes('forgot-password')) {
+        return;
+      }
+
       var cur_pos = $(this).scrollTop() + 200;
   
       nav_sections.each(function() {

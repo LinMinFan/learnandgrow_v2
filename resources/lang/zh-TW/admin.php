@@ -19,6 +19,7 @@ return [
     'username'              => '使用者名稱',
     'password'              => '密碼',
     'password_confirmation' => '確認密碼',
+    'email'                 => 'Email',
     'remember_me'           => '記住我',
     'user_setting'          => '用戶設置',
     'avatar'                => '頭像',

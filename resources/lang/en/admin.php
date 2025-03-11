@@ -19,6 +19,7 @@ return [
     'username'              => 'Username',
     'password'              => 'Password',
     'password_confirmation' => 'PasswordConfirmation',
+    'email'                 => 'Email',
     'remember_me'           => 'RememberMe',
     'user_setting'          => 'UserSetting',
     'avatar'                => 'Avatar',

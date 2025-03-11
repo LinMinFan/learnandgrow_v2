@@ -12,10 +12,10 @@ return [
     |
      */
 
-    'reset'     => '密碼已成功重設！',
-    'sent'      => '密碼重設郵件已發送！',
-    'throttled' => '請稍候再試。',
-    'token'     => '密碼重設碼無效。',
-    'user'      => '找不到該 E-mail 對應的使用者。',
+    'reset'     => 'reset success.',
+    'sent'      => 'reset password mail already sent.',
+    'throttled' => 'try again later.',
+    'token'     => 'The password reset code is invalid.',
+    'user'      => 'The user corresponding to this email cannot be found.',
     'forgot_your_password'  =>  'Forgot your password',
 ];
