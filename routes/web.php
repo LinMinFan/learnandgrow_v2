@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\OderController;
+use App\Http\Controllers\EcpayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +34,16 @@ Route::prefix('portfolio')->group(function () {
     Route::get('/', [PortfolioController::class, 'index'] )->name('portfolio.index');
 });
 
+/* 綠界介接 */
+Route::prefix('ecpay')->group(function () {
+    Route::get('/test', function () {
+        return view('ecpay.test-form');
+    })->name('ecpay.test');
+    Route::post('/create-order', [EcpayController::class, 'createOrder'])->name('ecpay.create.order');
+    Route::post('/notify', [EcpayController::class, 'notify'])->name('ecpay.notify');
+    Route::get('/return', [EcpayController::class, 'returnPage'])->name('ecpay.return');
+    Route::post('/client-notify', [EcpayController::class, 'clientNotify'])->name('ecpay.client.notify');
+});
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
