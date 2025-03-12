@@ -34,6 +34,11 @@
                                 {{ __('admin.portfolio') }}
                             </a>
                         </li>
+                        <li class="ecpay">
+                            <a href="{{ route('ecpay.test') }}" target="blank">
+                                金流串接(綠界)
+                            </a>
+                        </li>
                         <li class="contact">
                             <a href="{{ route('contact') }}">
                                 {{ __('admin.contact') }}
