@@ -45,6 +45,9 @@
                                 <a href="{{ route('chat.index') }}" target="blank">
                                     ChatGpt
                                 </a>
+                                <a href="{{ route('claude.index') }}" target="blank">
+                                    Claude
+                                </a>
                             </ul>
                         </li>
                         <li class="contact">

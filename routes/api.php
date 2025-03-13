@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\ClaudeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 /* ChatGpt */
 Route::post('/chat', [ChatController::class, 'chat']);
+
+/* Claude */
+Route::post('/ask-claude', [ClaudeController::class, 'askClaude']);

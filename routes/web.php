@@ -6,6 +6,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\OderController;
 use App\Http\Controllers\EcpayController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\ClaudeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +50,11 @@ Route::prefix('ecpay')->group(function () {
 /* ChatGpt */
 Route::prefix('chat')->group(function () {
     Route::get('/', [ChatController::class, 'index'])->name('chat.index');
+});
+
+/* Claude */
+Route::prefix('claude-ai')->group(function () {
+    Route::get('/', [ClaudeController::class, 'index'])->name('claude.index');
 });
 
 Route::get('/dashboard', function () {
