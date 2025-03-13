@@ -34,10 +34,18 @@
                                 {{ __('admin.portfolio') }}
                             </a>
                         </li>
-                        <li class="ecpay">
-                            <a href="{{ route('ecpay.test') }}" target="blank">
-                                金流串接(綠界)
+                        <li class="drop-down">
+                            <a href="#">
+                                串接功能
                             </a>
+                            <ul>
+                                <a href="{{ route('ecpay.test') }}" target="blank">
+                                    綠界科技 金流
+                                </a>
+                                <a href="{{ route('chat.index') }}" target="blank">
+                                    ChatGpt
+                                </a>
+                            </ul>
                         </li>
                         <li class="contact">
                             <a href="{{ route('contact') }}">

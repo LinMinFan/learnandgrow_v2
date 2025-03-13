@@ -57,7 +57,7 @@
 
 <body>
     <header>
-        @include('site.partials.member_header')
+        @include('site.partials.expansion_header')
     </header>
 
     <section>

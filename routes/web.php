@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\OderController;
 use App\Http\Controllers\EcpayController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +44,11 @@ Route::prefix('ecpay')->group(function () {
     Route::post('/notify', [EcpayController::class, 'notify'])->name('ecpay.notify');
     Route::get('/return', [EcpayController::class, 'returnPage'])->name('ecpay.return');
     Route::post('/client-notify', [EcpayController::class, 'clientNotify'])->name('ecpay.client.notify');
+});
+
+/* ChatGpt */
+Route::prefix('chat')->group(function () {
+    Route::get('/', [ChatController::class, 'index'])->name('chat.index');
 });
 
 Route::get('/dashboard', function () {

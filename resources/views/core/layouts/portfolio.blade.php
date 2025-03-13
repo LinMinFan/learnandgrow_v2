@@ -53,7 +53,7 @@
 
 <body>
     <header>
-        @include('site.partials.portfolio_header')
+        @include('site.partials.expansion_header')
     </header>
 
     <section>
