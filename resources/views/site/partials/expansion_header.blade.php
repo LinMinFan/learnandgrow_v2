@@ -21,9 +21,12 @@
                         </li>
                         <li class="drop-down">
                             <a href="#">
-                                串接功能
+                                應用及串接功能
                             </a>
                             <ul>
+                                <a href="https://vue-ssr.learnandgrow.com.tw/zh-TW" target="_blank">
+                                    Vuex Nuxt
+                                </a>
                                 <a href="{{ route('ecpay.test') }}" target="blank">
                                     綠界科技 金流
                                 </a>
